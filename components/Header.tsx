@@ -4,6 +4,8 @@ import React, { useEffect } from 'react'
 import { links } from '../utils/data'
 
 const Header: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false)
+
   useEffect(() => {
     const navbar = document.getElementById('navbar')
     const navbarHeight = navbar?.offsetHeight
@@ -11,8 +13,6 @@ const Header: React.FC = () => {
     const navbarOffsetBottom = navbarOffsetTop! + navbarHeight!
     const navbarTransparent = () => {
       const backgroundColor = 'bg-bg-senary'
-      const navbarOpacity = window.scrollY / 100
-
       if (window.scrollY >= navbarOffsetBottom) {
         navbar?.classList.add(backgroundColor)
         navbar?.classList.add('bg-opacity-50')
@@ -33,6 +33,17 @@ const Header: React.FC = () => {
     }
   })
 
+  const showBurgerMenu = () => {
+    const navbar = document.getElementById('navbar-default')
+    if (isMenuOpen) {
+      navbar?.classList.remove('hidden')
+    } else {
+      const navbar = document.getElementById('navbar-default')
+      navbar?.classList.add('hidden')
+    }
+    setIsMenuOpen(!isMenuOpen)
+  }
+
   return (
     <>
       <nav
@@ -43,15 +54,20 @@ const Header: React.FC = () => {
     "
       >
         <div
-          className="container flex flex-wrap mx-auto
+          className="container flex flex-wrap items-center justify-between mx-auto
         "
         >
           <button
-            data-collapse-toggle="navbar-default"
+            data-collapse="navbar-default"
             type="button"
-            className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            className="inline-flex items-center p-2 ml-3
+            text-sm text-gray-500 rounded-lg md:hidden
+            hover:bg-transparent focus:outline-none focus:ring-2
+            focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700
+            dark:focus:ring-gray-600"
             aria-controls="navbar-default"
             aria-expanded="false"
+            onClick={showBurgerMenu}
           >
             <span className="sr-only">Open main menu</span>
             <svg
@@ -62,35 +78,36 @@ const Header: React.FC = () => {
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                fill-rule="evenodd"
+                fillRule="evenodd"
                 d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                clip-rule="evenodd"
+                clipRule="evenodd"
               ></path>
             </svg>
           </button>
           <div
             className="
-              flex items-center justify-between w-full
-              hidden w-full md:block md:w-auto
+             hidden w-full md:block md:w-auto
             "
             id="navbar-default"
           >
             <ul
-              className="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg
+              className="
+              bg-transparent
+              flex flex-col p-4 mt-4 border-gray-100 rounded-lg
               bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm
               md:font-medium md:border-0 md:bg-transparent dark:bg-gray-800
               md:dark:bg-gray-900 dark:border-gray-700
-              bg-bg-primary
+
             "
             >
               <li className="">
-                {/*this div is a title of the page*/}
-
                 <h2
                   className="
               md:text-3xl md:font-bold text-font-primary
               md:dark:text-white
               md:-mt-2
+              hidden
+              md:visible
               "
                 >
                   DoMa
@@ -98,6 +115,7 @@ const Header: React.FC = () => {
               </li>
               {links.map(({ label, route }) => (
                 <li
+                  onClick={showBurgerMenu}
                   key={route}
                   className="
                 md:mx-2
@@ -105,7 +123,13 @@ const Header: React.FC = () => {
                 md:text-font-primary
                 hover:text-font-senary
                 dark:hover:text-font-senary
-
+                mx-2
+                my-1
+                text-sm
+                text-font-primary
+                dark:text-font-white
+                font-medium
+                text-center
                 "
                 >
                   <Link href={route}>{label.toUpperCase()}</Link>
