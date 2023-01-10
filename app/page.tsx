@@ -5,10 +5,6 @@ const HomePage: React.FC = () => {
   return (
     <>
       <InformationSection />
-      {/*      <AboutUs />
-      <ModelSection />
-      <ImagesSection />
-      <Footer />*/}
     </>
   )
 }
