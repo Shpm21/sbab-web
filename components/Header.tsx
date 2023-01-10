@@ -55,7 +55,6 @@ const Header: React.FC = () => {
       >
         <div
           className="container flex flex-wrap items-center justify-between mx-auto
-          bg-transparent
         "
         >
           <button
@@ -88,17 +87,16 @@ const Header: React.FC = () => {
           <div
             className="
              hidden w-full md:block md:w-auto
+             md:bg-transparent md:shadow-none
             "
             id="navbar-default"
           >
             <ul
               className="
-              bg-transparent
               flex flex-col p-4 mt-4 border-gray-100 rounded-lg
-              bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm
+              bg-bg-primary md:flex-row md:space-x-8 md:mt-0 md:text-sm
               md:font-medium md:border-0 md:bg-transparent dark:bg-gray-800
               md:dark:bg-gray-900 dark:border-gray-700
-
             "
             >
               <li className="">
