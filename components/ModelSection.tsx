@@ -7,10 +7,10 @@ const ModelSection: React.FC = () => {
         id="model"
         className="
           container mx-auto
-            px-4 sm:px-6 lg:px-8
-            py-8
+            rounded-lg px-4 py-8
             dark:bg-gray-800
-            rounded-lg
+            sm:px-6
+            lg:px-8
         "
       >
         <h1
@@ -22,14 +22,14 @@ const ModelSection: React.FC = () => {
         </h1>
         <div
           className="
-                    grid
+                    mt-6
+            grid
             grid-cols-1
-            md:grid-cols-2
             gap-6
-            md:gap-8
-            mt-6
             text-gray-600
             dark:text-gray-400
+            md:grid-cols-2
+            md:gap-8
         "
         >
           <p

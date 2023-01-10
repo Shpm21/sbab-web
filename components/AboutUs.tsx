@@ -1,5 +1,5 @@
 import Biography from './Biography'
-import { getAboutUsers } from '../utils/data'
+import { getAboutUsers } from '../utils/textData'
 import React from 'react'
 const AboutUs: React.FC = () => {
   return (
@@ -7,36 +7,31 @@ const AboutUs: React.FC = () => {
       <div
         id="about us"
         className="
-          container mx-auto
-            px-4 sm:px-6 lg:px-8
-            py-8
-            dark:bg-gray-800
-            rounded-lg
-                    flex flex-col
-        justify-center
-        min-h-screen
+        container mx-auto
+        flex min-h-screen flex-col justify-center rounded-lg px-4 py-8 dark:bg-gray-800
+        sm:px-6
         sm:py-0
+        md:-mt-32
+        lg:px-8
       "
       >
         <div
-          className="                 grid
-            grid-cols-1
-            md:grid-cols-2
-            gap-6
-            md:gap-8
+          className="
             mt-6
+            grid
+            grid-cols-1
+            gap-6
             text-gray-600
-            dark:text-gray-400"
+            dark:text-gray-400
+            md:grid-cols-2
+            md:gap-8"
         >
           <h1
-            className="            text-4xl
-            font-bold
-            text-font-primary
+            className="
+            text-4xl font-bold text-font-primary
             dark:text-white
-            //responsive to mobile
-            md:text-6xl
             md:justify-center
-            //lg
+            md:text-6xl
             lg:text-7xl"
           >
             About Us
@@ -44,14 +39,14 @@ const AboutUs: React.FC = () => {
         </div>
         <div
           className="
+            mt-6
             grid
             grid-cols-1
-            md:grid-cols-2
             gap-6
-            md:gap-8
-            mt-6
             text-gray-600
             dark:text-gray-400
+            md:grid-cols-2
+            md:gap-8
         "
         >
           {getAboutUsers()!.map((aboutUser) => (

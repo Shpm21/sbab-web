@@ -1,5 +1,23 @@
+import { AboutUser } from './interface-templates'
+
+const aboutUsers: AboutUser[] = [
+  {
+    name: 'Paul Leger',
+    biography:
+      'I am an associate professor at Universidad Católica del Norte (Chile). My research interests include issues related to programming languages, software engineering, and different programming approaches. I received his PhD in Computer Science at the University of Chile.',
+    image: require('../assets/images/paul-leger.png'),
+    website: 'https://pleger.cl',
+  },
+  {
+    name: 'Oswaldo Terán',
+    biography:
+      'Systems Engineer and M.Sc in Applied Statistics at the University of Los Andes, Venezuela; Ph. D. in Computational Modelling at the Manchester Metropolitan University, Manchester, UK; Post-Doc in the EMOTES Project at the Université de Toulouse 1, Toulouse, France. Professor at the Catholic University of the North, Chile, 2019 to present.',
+    image: require('../assets/images/oswaldo-teran.jpg'),
+    website: 'https://www.linkedin.com/in/oswaldo-teran-6b1b4b1/',
+  },
+]
 export const rootName =
-  'DoMa is a Social Simulator using Agent-Based Model with Endorsement supporting'
+  'DoMa: Social Simulator using Agent-Based Model with Endorsement supporting'
 
 export const rootDescription =
   'This website presents a Java flexible agent-based model using an ' +
@@ -8,13 +26,13 @@ export const rootDescription =
   'interaction (e.g, B2C e-commerce) with a realistic consideration of ' +
   'agents’ decision-making mechanisms, based on the endorsement scheme, ' +
   'Word-Of-Mouth (WOM). The flexible model also allows Scenario analysis.'
-
+export const rootDescription2 =
+  'We will exemplify the model assuming that it is used to represent the interaction between buyers and sellers in an online B2C marketplace. Marketplaces are the sellers, and individuals shopping at the website of the marketplaces are the buyers. Another example of a possible representation: hospitals or local markets like Carrefour vs. its users/clients.'
 export const modelUseText1 =
-  'This website presents a Java flexible agent-based model using an ' +
-  'object-oriented paradigm ' +
-  "(a general-purpose computer language) to represent agents' social " +
-  'interaction (e.g, B2C e-commerce) with a realistic consideration of ' +
-  'agents’ decision-making mechanisms, based on the endorsement scheme, ' +
-  'Word-Of-Mouth (WOM). The flexible model also allows Scenario analysis.'
+  'We will exemplify the model assuming that it is used to represent the interaction between buyers and sellers in an online B2C marketplace. Marketplaces are the sellers, and individuals shopping at the website of the marketplaces are the buyers. Another example of a possible representation: hospitals or local markets like Carrefour vs. its users/clients.'
 export const modelUseText2 =
   'A realistic consideration of buyers’ decision-making mechanism is done, based on the endorsement scheme and supported by data. Only buyers use endorsements. In a general consideration, the interaction is as follows. On one hand, each time iteration, a set of agents (e.g., sellers) show a set of attributes that are observed and endorsed by another set of agents (e.g., buyers). This last set of agents learns (we can refer to them as the “set of agents that learn”), while interacting with the first set of agents, improving their decisions over time, by using endorsements. The first set of agents presents their attributes randomly. Which are the endorsed attributes, and their randomness, is determined in accordance with how it has been perceived in the real system by buyers. Diverse data sources can be used, e.g., surveys. At each iteration, buyers also interchange information via word of mouth (WOM). WOM allows buyers to communicate (suggest) the names of marketplaces to other buyers (each buyer suggests the best evaluated marketplace). On the other hand, at each iteration, buyers evaluate sellers (using the endorsement function to evaluate the shown attributes) and choose a seller. Then, they endorse the chosen seller in accordance to the attributes it presented. Finally, sellers share information with others (via WOM), and the iteration finishes. The whole simulation process is illustrated in the figure shown below. Additional detail is given in the ODD summary table given below.\n'
+
+export const getAboutUsers = (): AboutUser[] => {
+  return aboutUsers
+}

@@ -20,22 +20,22 @@ const Carousel: React.FC = () => {
     <>
       <div className="carousel my-12 mx-auto">
         <div className="relative overflow-hidden">
-          <div className="flex justify-between left">
+          <div className="left flex justify-between">
             <button
               // onClick={movePrev}
-              className="hover:bg-blue-900/75 text-white w-10 h-full text-center opacity-75 hover:opacity-100 disabled:opacity-25 disabled:cursor-not-allowed z-10 p-0 m-0 transition-all ease-in-out duration-300"
+              className="z-10 m-0 h-full w-10 p-0 text-center text-white opacity-75 transition-all duration-300 ease-in-out hover:bg-blue-900/75 hover:opacity-100 disabled:cursor-not-allowed disabled:opacity-25"
               disabled={false}
             >
               <span className="sr-only">Prev</span>
             </button>
             <button
               // onClick={moveNext}
-              className="hover:bg-blue-900/75 text-white w-10 h-full text-center opacity-75 hover:opacity-100 disabled:opacity-25 disabled:cursor-not-allowed z-10 p-0 m-0 transition-all ease-in-out duration-300"
+              className="z-10 m-0 h-full w-10 p-0 text-center text-white opacity-75 transition-all duration-300 ease-in-out hover:bg-blue-900/75 hover:opacity-100 disabled:cursor-not-allowed disabled:opacity-25"
               disabled={false}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-12 w-20 -ml-5"
+                className="-ml-5 h-12 w-20"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -50,7 +50,7 @@ const Carousel: React.FC = () => {
               <span className="sr-only">Next</span>
             </button>
           </div>
-          <div className="carousel-container relative flex gap-1 overflow-hidden scroll-smooth snap-x snap-mandatory touch-pan-x z-0">
+          <div className="carousel-container relative z-0 flex touch-pan-x snap-x snap-mandatory gap-1 overflow-hidden scroll-smooth">
             {images.map((image, index) => {
               return (
                 <Image

@@ -1,10 +1,10 @@
 'use client'
 import Link from 'next/link'
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { links } from '../utils/data'
 
 const Header: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
 
   useEffect(() => {
     const navbar = document.getElementById('navbar')
@@ -48,23 +48,23 @@ const Header: React.FC = () => {
     <>
       <nav
         id={'navbar'}
-        className=" border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-900
-    dark:border-gray-800 dark:text-gray-100
-   transition-all duration-600
+        className=" duration-600 border-gray-200 px-2 py-2.5 transition-all
+    dark:border-gray-800 dark:bg-gray-900
+   dark:text-gray-100 sm:px-4
     "
       >
         <div
-          className="container flex flex-wrap items-center justify-between mx-auto
+          className="container mx-auto flex flex-wrap items-center justify-between
         "
         >
           <h2
             className="
-              md:text-3xl md:font-bold text-font-primary
-              md:dark:text-white
-              md:-mt-2
-              text-2xl
-              font-bold
+              text-2xl font-bold text-font-primary
               dark:text-white
+              md:-mt-2
+              md:text-3xl
+              md:font-bold
+              md:dark:text-white
 
               "
           >
@@ -73,18 +73,18 @@ const Header: React.FC = () => {
           <button
             data-collapse="navbar-default"
             type="button"
-            className="inline-flex items-center p-2 ml-3
-            text-sm text-gray-500 rounded-lg md:hidden
-            hover:bg-transparent focus:outline-none focus:ring-2
-            focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700
-            dark:focus:ring-gray-600"
+            className="ml-3 inline-flex items-center rounded-lg
+            p-2 text-sm text-gray-500 hover:bg-transparent
+            focus:outline-none focus:ring-2 focus:ring-gray-200
+            dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600
+            md:hidden"
             aria-controls="navbar-default"
             aria-expanded="false"
             onClick={showBurgerMenu}
           >
             <span className="sr-only">Open main menu</span>
             <svg
-              className="w-6 h-6"
+              className="h-6 w-6"
               aria-hidden="true"
               fill="currentColor"
               viewBox="0 0 20 20"
@@ -106,10 +106,10 @@ const Header: React.FC = () => {
           >
             <ul
               className="
-              flex flex-col p-4 mt-4 border-gray-100 rounded-lg
-              bg-bg-primary md:flex-row md:space-x-8 md:mt-0 md:text-sm
-              md:font-medium md:border-0 md:bg-transparent dark:bg-gray-800
-              md:dark:bg-gray-900 dark:border-gray-700
+              mt-4 flex flex-col rounded-lg border-gray-100 bg-bg-primary
+              p-4 dark:border-gray-700 dark:bg-gray-800 md:mt-0 md:flex-row
+              md:space-x-8 md:border-0 md:bg-transparent md:text-sm
+              md:font-medium md:dark:bg-gray-900
             "
             >
               {links.map(({ label, route }) => (
@@ -117,18 +117,18 @@ const Header: React.FC = () => {
                   onClick={showBurgerMenu}
                   key={route}
                   className="
+                dark:text-font-white
+                mx-2
+                my-1
+                text-center
+                text-sm
+                font-medium
+                text-font-primary
+                hover:text-font-senary
+                dark:hover:text-font-senary
                 md:mx-2
                 md:my-1
                 md:text-font-primary
-                hover:text-font-senary
-                dark:hover:text-font-senary
-                mx-2
-                my-1
-                text-sm
-                text-font-primary
-                dark:text-font-white
-                font-medium
-                text-center
                 "
                 >
                   <Link href={route}>{label.toUpperCase()}</Link>

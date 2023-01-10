@@ -1,46 +1,40 @@
 import { AboutUser } from '../utils/interface-templates'
 import React from 'react'
 import Image from 'next/image'
+import LinkText from './LinkText'
 interface Props {
   aboutUser: AboutUser
 }
 
 const Biography: React.FC<Props> = (props: Props) => {
-  const { biography, name, image } = props.aboutUser
+  const { biography, name, image, website } = props.aboutUser
   return (
     <div
-      //pon el div de la imagen con el name arriba y el bio abajo, el div de la imagen ocupara el 20% y el bio el 80%
       className="
         grid
         grid-cols-1
-        md:grid-cols-1
         gap-6
-        md:gap-6
-            px-4 sm:px-6 lg:px-8
-            py-8
-            bg-bg-senary
-            dark:bg-gray-800
-            rounded-lg
-            shadow-md
-            dark:border-gray-700
+        rounded-lg
+        bg-bg-primary
+        md:grid-cols-1
+        md:gap-8
         "
     >
-      {/*//this div estara a la arriba con la imagen en circular y el nombre a la derecha de la imagen, bien cerca*/}
       <div
         className="
-          grid
-          grid-cols-2
-
+          grid grid-cols-1
+          place-items-center
       "
       >
         <Image
           className="
+            mt-4
             rounded-full
           "
           src={image!}
           alt={name}
-          width={100}
-          height={100}
+          width={200}
+          height={200}
         />
         <h1
           className="
@@ -49,10 +43,11 @@ const Biography: React.FC<Props> = (props: Props) => {
             text-font-primary
             dark:text-white
             md:text-3xl
-            lg:text-4xl "
+    "
         >
           {name}
         </h1>
+        <LinkText href={website!} text={website!} />
       </div>
       <div
         className="
@@ -62,9 +57,12 @@ const Biography: React.FC<Props> = (props: Props) => {
       >
         <p
           className="
+            px-4
+            pb-4
+            text-center
+            text-justify
             text-font-secondary
             dark:text-gray-400
-
             "
         >
           {biography}

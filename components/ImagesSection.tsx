@@ -7,10 +7,10 @@ const ImagesSection: React.FC = () => {
       <div
         id="images"
         className="container mx-auto
-            px-4 sm:px-6 lg:px-8
-            py-8
+            rounded-lg px-4 py-8
             dark:bg-gray-800
-            rounded-lg"
+            sm:px-6
+            lg:px-8"
       >
         <h1 className="text-4xl font-bold text-font-primary dark:text-white">
           Images Section
