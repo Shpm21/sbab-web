@@ -55,6 +55,7 @@ const Header: React.FC = () => {
       >
         <div
           className="container flex flex-wrap items-center justify-between mx-auto
+          bg-transparent
         "
         >
           <button
