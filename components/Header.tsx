@@ -57,6 +57,19 @@ const Header: React.FC = () => {
           className="container flex flex-wrap items-center justify-between mx-auto
         "
         >
+          <h2
+            className="
+              md:text-3xl md:font-bold text-font-primary
+              md:dark:text-white
+              md:-mt-2
+              text-2xl
+              font-bold
+              dark:text-white
+
+              "
+          >
+            DoMa
+          </h2>
           <button
             data-collapse="navbar-default"
             type="button"
@@ -99,19 +112,6 @@ const Header: React.FC = () => {
               md:dark:bg-gray-900 dark:border-gray-700
             "
             >
-              <li className="">
-                <h2
-                  className="
-              md:text-3xl md:font-bold text-font-primary
-              md:dark:text-white
-              md:-mt-2
-              hidden
-              md:visible
-              "
-                >
-                  DoMa
-                </h2>
-              </li>
               {links.map(({ label, route }) => (
                 <li
                   onClick={showBurgerMenu}
