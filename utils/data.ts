@@ -61,3 +61,9 @@ export const links = [
     route: '/application',
   },
 ]
+
+const logo = require('../assets/images/LogoPragmaticsLab.png')
+
+export const getLogo = (): string => {
+  return logo
+}
