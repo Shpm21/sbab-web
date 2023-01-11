@@ -16,13 +16,13 @@ const Header: React.FC = () => {
       if (window.scrollY >= navbarOffsetBottom) {
         navbar?.classList.add(backgroundColor)
         navbar?.classList.add('bg-opacity-50')
-        navbar?.classList.add('dark:bg-gray-800')
+        navbar?.classList.add('dark:bg-opacity-50')
         navbar?.classList.add('shadow')
         navbar?.classList.remove('bg-bg-primary')
       } else {
         navbar?.classList.remove(backgroundColor)
         navbar?.classList.remove('bg-opacity-50')
-        navbar?.classList.remove('dark:bg-gray-800')
+        navbar?.classList.remove('dark:bg-opacity-50')
         navbar?.classList.remove('shadow')
         navbar?.classList.add('bg-bg-primary')
       }
@@ -49,7 +49,7 @@ const Header: React.FC = () => {
       <nav
         id={'navbar'}
         className=" duration-600 border-gray-200 px-2 py-2.5 transition-all
-    dark:border-gray-800 dark:bg-gray-900
+    dark:border-gray-800 dark:bg-gray-800
    dark:text-gray-100 sm:px-4
    fixed
     top-0 left-0 right-0 z-50
@@ -103,15 +103,17 @@ const Header: React.FC = () => {
             className="
              hidden w-full md:block md:w-auto
              md:bg-transparent md:shadow-none
+              md:dark:bg-transparent
+
             "
             id="navbar-default"
           >
             <ul
               className="
               mt-4 flex flex-col rounded-lg border-gray-100 bg-bg-primary
-              p-4 dark:border-gray-700 dark:bg-gray-800 md:mt-0 md:flex-row
-              md:space-x-8 md:border-0 md:bg-transparent md:text-sm
-              md:font-medium md:dark:bg-gray-900
+              p-4 dark:border-gray-700 md:mt-0 md:flex-row
+              md:space-x-8 md:border-0 md:dark:bg-transparent md:text-sm
+              md:font-medium md:dark:bg-gray-900 dark:bg-gray-800
             "
             >
               {links.map(({ label, route }) => (

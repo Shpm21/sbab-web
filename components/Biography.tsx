@@ -18,6 +18,7 @@ const Biography: React.FC<Props> = (props: Props) => {
         bg-bg-primary
         md:grid-cols-1
         md:gap-8
+        dark:bg-gray-800
         "
     >
       <div

@@ -9,12 +9,12 @@ const GenericContainer: React.FC<Props> =({children}) => {
       container mx-auto
       flex min-h-screen flex-col
       justify-center
-      rounded-lg //opcional
+      rounded-lg
       px-4
       py-20
       md:px-8
       md:py-24
-      dark:bg-gray-800
+      dark:bg-transparent
       sm:px-6
       sm:py-20
       lg:px-8

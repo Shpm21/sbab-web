@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
   const logo = getLogo()
   return (
     <>
-      <footer className="rounded-lg bg-black p-4 shadow dark:bg-gray-800 md:flex md:items-center md:justify-between md:p-6">
+      <footer className="rounded-lg bg-black p-4 shadow dark:bg-black md:flex md:items-center md:justify-between md:p-6">
         <div className='md:flex md:justify-between
           md:ml-6
         '>
