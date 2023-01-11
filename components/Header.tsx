@@ -12,7 +12,7 @@ const Header: React.FC = () => {
     const navbarOffsetTop = navbar?.offsetTop
     const navbarOffsetBottom = navbarOffsetTop! + navbarHeight!
     const navbarTransparent = () => {
-      const backgroundColor = 'bg-bg-senary'
+      const backgroundColor = 'bg-black'
       if (window.scrollY >= navbarOffsetBottom) {
         navbar?.classList.add(backgroundColor)
         navbar?.classList.add('bg-opacity-50')
