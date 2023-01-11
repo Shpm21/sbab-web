@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'bg-primary': '#001848',
+        'bg-primary': '#304878',
         'bg-secondary': '#002D6C',
         'bg-tertiary': '#00418C',
         'bg-quaternary': '#0055AC',
@@ -13,6 +13,7 @@ module.exports = {
         'font-primary': '#ffffff',
         'font-secondary': '#d0d0d0',
         'font-senary': '#2a13fd',
+        'bg-end': '#001848',
       },
     },
   },

@@ -10,7 +10,8 @@
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
 
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 0, 24, 72;
+
+  --background-start-rgb: 48,72,120;
     --background-end-rgb: 0, 0, 0;
   --primary-glow: conic-gradient(
     from 180deg at 50% 50%,
