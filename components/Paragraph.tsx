@@ -23,7 +23,7 @@ const Paragraph: React.FC<Props> = (props: Props) => {
   const paragraphClass = `
     text-font-secondary
     dark:text-gray-400
-    md:text-2xl
+    md:text-xl
     sm:text-xl
     ${justifyClass}
   `

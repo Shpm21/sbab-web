@@ -21,14 +21,12 @@ const Subtitle: React.FC<Props> = (props: Props) => {
       >
         <h1
           className="
-            {/*md:-mt-20*/}
-            text-4xl
+            text-3xl
             font-bold
             text-font-primary
             dark:text-white
             md:justify-center
-            md:text-6xl
-            sm:text-5xl
+            md:text-5xl
          "
         >
           {subTitle}

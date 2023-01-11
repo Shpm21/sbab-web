@@ -63,6 +63,7 @@ const Biography: React.FC<Props> = (props: Props) => {
             text-justify
             text-font-secondary
             dark:text-gray-400
+            md:text-xl
             "
         >
           {biography}
