@@ -3,20 +3,11 @@ import React from 'react'
 import { rootDescription, rootDescription2, rootName } from '../utils/textData'
 import Subtitle from './Subtitle'
 import Paragraph from './Paragraph'
+import GenericContainer from './GenericContainer'
 
 const InformationSection: React.FC = () => {
   return (
-    <div
-      className="
-      container mx-auto
-        flex min-h-screen flex-col
-        justify-center
-        px-4 py-8
-        sm:px-6
-        sm:py-0
-        lg:px-8
-        {/*md:-mt-20*/}
-        "
+    <GenericContainer
     >
       <Subtitle subTitle={rootName} />
       <Paragraph paragraph={rootDescription} justify={false} gridCols2={true} />
@@ -39,7 +30,7 @@ const InformationSection: React.FC = () => {
       >
         {'See more...'}
       </Link>
-    </div>
+    </GenericContainer>
   )
 }
 

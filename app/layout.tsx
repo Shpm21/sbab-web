@@ -11,9 +11,9 @@ export default function RootLayout({
   return (
     <html>
       <head>
-        <title>Web App</title>
+        <title>DoMa: Social Simulator</title>
       </head>
-      <body>
+      <body className="">
         <Header />
         {children}
         <Footer />

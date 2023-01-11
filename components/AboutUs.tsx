@@ -2,23 +2,11 @@ import Biography from './Biography'
 import { getAboutUsers } from '../utils/textData'
 import React from 'react'
 import Subtitle from './Subtitle'
+import GenericContainer from './GenericContainer'
 const AboutUs: React.FC = () => {
   return (
     <>
-      <div
-        id="about us"
-        className="
-        container mx-auto
-        flex min-h-screen flex-col
-        justify-center
-        rounded-lg
-        px-4 py-8
-        dark:bg-gray-800
-        sm:px-6
-        sm:py-20
-        md:-mt-20
-        lg:px-8
-      "
+      <GenericContainer
       >
         <Subtitle subTitle={'About Us'} />
         <div
@@ -37,7 +25,7 @@ const AboutUs: React.FC = () => {
             <Biography aboutUser={aboutUser} key={aboutUser.name} />
           ))}
         </div>
-      </div>
+      </GenericContainer>
     </>
   )
 }
