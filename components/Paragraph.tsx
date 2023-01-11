@@ -13,7 +13,7 @@ const Paragraph: React.FC<Props> = (props: Props) => {
   const containerClass = `
     grid
     grid-cols-1
-    ${gridCols2Class}
+    md:${gridCols2Class}
     gap-6
     md:gap-8
     mt-6
@@ -25,7 +25,8 @@ const Paragraph: React.FC<Props> = (props: Props) => {
     dark:text-gray-400
     md:text-xl
     sm:text-xl
-    ${justifyClass}
+    text-justify
+    md:${justifyClass}
   `
 
   return (
