@@ -15,9 +15,10 @@ const ModelUse: React.FC = () => {
             rounded-lg
             px-4
             py-8 dark:bg-gray-800
-        sm:px-6
-        sm:py-0
+            sm:px-6
+            sm:py-20
         lg:px-8
+        md:-mt-20
       "
       >
         <Subtitle subTitle={'Model Usage'} />

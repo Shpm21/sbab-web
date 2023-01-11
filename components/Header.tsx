@@ -51,6 +51,7 @@ const Header: React.FC = () => {
         className=" duration-600 border-gray-200 px-2 py-2.5 transition-all
     dark:border-gray-800 dark:bg-gray-900
    dark:text-gray-100 sm:px-4
+   {/*fixed top-0 left-0 right-0 z-50*/}
     "
       >
         <div

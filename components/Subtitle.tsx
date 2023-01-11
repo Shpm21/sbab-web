@@ -28,7 +28,7 @@ const Subtitle: React.FC<Props> = (props: Props) => {
             dark:text-white
             md:justify-center
             md:text-6xl
-
+            sm:text-5xl
          "
         >
           {subTitle}

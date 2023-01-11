@@ -24,6 +24,7 @@ const Paragraph: React.FC<Props> = (props: Props) => {
     text-font-secondary
     dark:text-gray-400
     md:text-2xl
+    sm:text-xl
     ${justifyClass}
   `
 

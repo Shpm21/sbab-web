@@ -15,6 +15,7 @@ const InformationSection: React.FC = () => {
         sm:px-6
         sm:py-0
         lg:px-8
+        {/*md:-mt-20*/}
         "
     >
       <Subtitle subTitle={rootName} />
