@@ -7,7 +7,7 @@ const aboutUsers: AboutUser[] = [
       'I am an associate professor at Universidad Católica del Norte (Chile). ' +
       'My research interests include issues related to programming languages,' +
       ' software engineering, and different programming approaches. I received ' +
-      'his PhD in Computer Science at the University of Chile.',
+      'a PhD in Computer Science at the University of Chile.',
     image: require('../assets/images/paul-leger.png'),
     website: 'https://pleger.cl',
   },
@@ -15,7 +15,7 @@ const aboutUsers: AboutUser[] = [
     name: 'Oswaldo Terán',
     biography:
       'Systems Engineer and M.Sc in Applied Statistics at the ' +
-      'University of Los Andes, Venezuela; Ph. D. in Computational ' +
+      'Universidad de Los Andes, Venezuela; Ph. D. in Computational ' +
       'Modelling at the Manchester Metropolitan University, Manchester, ' +
       'UK; Post-Doc in the EMOTES Project at the Université de Toulouse 1, ' +
       'Toulouse, France. Academic at the Universidad Católica del Norte, Chile.',
@@ -51,7 +51,7 @@ export const modelUseText2 =
   'A realistic consideration of buyers’ decision-making mechanism is done,' +
   ' based on the endorsement scheme and supported by data. Only buyers use' +
   ' endorsements. In a general consideration, the interaction is as follows.' +
-  ' On one hand, each time iteration, a set of agents (e.g., sellers) show' +
+  ' On the one hand, each time iteration, a set of agents (e.g., sellers) show' +
   ' a set of attributes that are observed and endorsed by another set of' +
   ' agents (e.g., buyers). This last set of agents learns (we can refer' +
   ' to them as the “set of agents that learn”), while interacting ' +
