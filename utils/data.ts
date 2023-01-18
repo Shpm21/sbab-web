@@ -1,6 +1,3 @@
-import { AboutUser } from './interface-templates'
-
-//load images to images folder, the name of the image is a number.png beetwen 1 and 10
 export interface ImagesProps {
   src: string
   id: number
@@ -66,4 +63,10 @@ const logo = require('../assets/images/LogoPragmaticsLab.png')
 
 export const getLogo = (): string => {
   return logo
+}
+
+const modelUsageImage = require('../assets/images/ModeloSBABM.png')
+
+export const getModelUsageImage = (): string => {
+  return modelUsageImage
 }
