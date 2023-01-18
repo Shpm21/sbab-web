@@ -2,6 +2,7 @@ import { AboutUser } from '../utils/interface-templates'
 import React from 'react'
 import Image from 'next/image'
 import LinkText from './LinkText'
+
 interface Props {
   aboutUser: AboutUser
 }
@@ -16,9 +17,9 @@ const Biography: React.FC<Props> = (props: Props) => {
         gap-6
         rounded-lg
         bg-bg-primary
+        dark:bg-gray-800
         md:grid-cols-1
         md:gap-8
-        dark:bg-gray-800
         "
     >
       <div
