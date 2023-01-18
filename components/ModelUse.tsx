@@ -24,6 +24,7 @@ const ModelUse: React.FC = () => {
             alt={'model-image'}
             width={800}
             height={800}
+            className="dark:invert dark:filter"
           />
         </div>
         <Paragraph paragraph={modelUseText2} justify={true} gridCols2={false} />
