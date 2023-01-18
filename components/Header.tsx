@@ -48,11 +48,11 @@ const Header: React.FC = () => {
     <>
       <nav
         id={'navbar'}
-        className=" duration-600 border-gray-200 px-2 py-2.5 transition-all
-    dark:border-gray-800 dark:bg-gray-800
-   dark:text-gray-100 sm:px-4
-   fixed
-    top-0 left-0 right-0 z-50
+        className=" duration-600 fixed top-0 left-0 right-0
+    z-50 border-gray-200
+   px-2 py-2.5
+   transition-all
+    dark:border-gray-800 dark:bg-gray-800 dark:text-gray-100 sm:px-4
     "
       >
         <div
@@ -111,9 +111,9 @@ const Header: React.FC = () => {
             <ul
               className="
               mt-4 flex flex-col rounded-lg border-gray-100 bg-bg-primary
-              p-4 dark:border-gray-700 md:mt-0 md:flex-row
-              md:space-x-8 md:border-0 md:dark:bg-transparent md:text-sm
-              md:font-medium md:dark:bg-gray-900 dark:bg-gray-800
+              p-4 dark:border-gray-700 dark:bg-gray-800 md:mt-0
+              md:flex-row md:space-x-8 md:border-0 md:text-sm
+              md:font-medium md:dark:bg-transparent md:dark:bg-gray-900
             "
             >
               {links.map(({ label, route }) => (
@@ -128,8 +128,7 @@ const Header: React.FC = () => {
                 text-sm
                 font-medium
                 text-font-primary
-                hover:text-font-senary
-                dark:hover:text-font-senary
+                hover:text-blue-500
                 md:mx-2
                 md:my-1
                 md:text-font-primary
