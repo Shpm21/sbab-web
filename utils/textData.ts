@@ -24,7 +24,8 @@ const aboutUsers: AboutUser[] = [
   },
 ]
 export const rootName =
-  'DoMa: Agent-Based Modelling Social Simulator with contextual reasoning supported on Endorsements'
+  'DoMa: Agent-Based Modelling Social Simulator with contextual  ' +
+  'supported on Endorsements'
 
 export const rootDescription =
   'This website presents a Java flexible agent-based model using an ' +
@@ -34,8 +35,8 @@ export const rootDescription =
   'agents’ decision-making mechanisms, based on the endorsement scheme, ' +
   'and Word-Of-Mouth (WOM). The flexible model also allows Scenario analysis.'
 export const rootDescription2 =
-  'We will exemplify the model assuming that it is used to represent the' +
-  ' interaction between buyers and sellers in an online B2C marketplace. ' +
+  'We will exemplify the model assuming that it is used to represent the ' +
+  'interaction between buyers and sellers in an online B2C marketplace. ' +
   'Marketplaces are the sellers, and individuals shopping at the website ' +
   'of the marketplaces are the buyers. Another example of a possible ' +
   'representation: hospitals or local markets like Carrefour vs. its ' +
