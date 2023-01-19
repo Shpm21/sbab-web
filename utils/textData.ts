@@ -18,7 +18,7 @@ const aboutUsers: AboutUser[] = [
       'Universidad de Los Andes, Venezuela; Ph. D. in Computational ' +
       'Modelling at the Manchester Metropolitan University, Manchester, ' +
       'UK; Post-Doc in the EMOTES Project at the Université de Toulouse 1, ' +
-      'Toulouse, France. Academic at the Universidad Católica del Norte, Chile.',
+      'Toulouse, France. Academic at the Universidad Católica del Norte (Chile).',
     image: require('../assets/images/oswaldo-teran.jpg'),
     website: 'https://www.linkedin.com/in/oswaldo-teran-6b1b4b1/',
   },
@@ -31,18 +31,18 @@ export const rootDescription =
   'This website presents a Java flexible agent-based model using an ' +
   'object-oriented paradigm ' +
   "(a general-purpose computer language) to represent agents' social " +
-  'interaction (e.g, B2C e-commerce) with a realistic consideration of ' +
+  'interaction (e.g., B2C e-commerce) with a realistic consideration of ' +
   'agents’ decision-making mechanisms, based on the endorsement scheme, ' +
-  'and Word-Of-Mouth (WOM). The flexible model also allows Scenario analysis.'
+  'and Word-Of-Mouth (WOM). The flexible model also allows  researchers to analyze (hypothetical) scenarios.'
 export const rootDescription2 =
-  'We will exemplify the model assuming that it is used to represent the ' +
+  'We exemplify the model assuming that it is used to represent the ' +
   'interaction between buyers and sellers in an online B2C marketplace. ' +
   'Marketplaces are the sellers, and individuals shopping at the website ' +
   'of the marketplaces are the buyers. Another example of a possible ' +
   'representation: hospitals or local markets like Carrefour vs. its ' +
   'users/clients.'
 export const modelUseText1 =
-  'We will exemplify the model assuming that it is used to represent the ' +
+  'We exemplify the model assuming that it is used to represent the ' +
   'interaction between buyers and sellers in an online B2C marketplace. ' +
   'Marketplaces are the sellers, and individuals shopping at the website ' +
   'of the marketplaces are the buyers. Another example of a possible ' +
