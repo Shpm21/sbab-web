@@ -1,10 +1,3 @@
-import {
-  CarouselProvider,
-  Slider,
-  Slide,
-  ButtonBack,
-  ButtonNext,
-} from 'pure-react-carousel'
 import 'pure-react-carousel/dist/react-carousel.es.css'
 import { getImages } from '../utils/data'
 import Image from 'next/image'
