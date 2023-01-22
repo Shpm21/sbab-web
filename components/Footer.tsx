@@ -1,7 +1,6 @@
 import React from 'react'
-import Image from 'next/image'
 import { getLogoPragmatics, getLogoUcn } from '../utils/data'
-
+import GenericIcon from './GenericIcon'
 const Footer: React.FC = () => {
   const logoPragmatics = getLogoPragmatics()
   const logoUcn = getLogoUcn()
@@ -14,36 +13,20 @@ const Footer: React.FC = () => {
           md:justify-between md:space-x-4
         "
         >
-          <div
-            className="4 mb-6 flex
-            h-14 w-14 items-center
-             justify-center rounded-full bg-white shadow-md md:mb-0
-              md:h-20 md:w-20"
-          >
-            <a href="https://pragmaticslab.com/" className="flex items-center">
-              <Image
-                src={logoPragmatics}
-                alt="Pragmaticslab"
-                width={100}
-                height={100}
-              />
-            </a>
-          </div>
-          <div
-            className="4 mb-6 flex
-            h-14 w-14 items-center
-             justify-center rounded-full bg-white shadow-md md:mb-0
-              md:h-20 md:w-20"
-          >
-            <a href="https://pragmaticslab.com/" className="flex items-center">
-              <Image
-                src={logoUcn}
-                alt="Pragmaticslab"
-                width={100}
-                height={100}
-              />
-            </a>
-          </div>
+          <GenericIcon
+            src={logoPragmatics}
+            width={100}
+            height={100}
+            href="https://pragmaticslab.com/"
+            alt="PragmaticsLab"
+          />
+          <GenericIcon
+            src={logoUcn}
+            width={100}
+            height={100}
+            href="https://www.ucn.cl/"
+            alt="UCN"
+          />
         </div>
 
         <span className="text-sm text-gray-500 dark:text-gray-300 sm:text-center">
@@ -53,10 +36,11 @@ const Footer: React.FC = () => {
         <div className="mt-4 flex space-x-6 sm:justify-center md:mt-0">
           <a
             href="https://github.com/pragmaticslaboratory/SBABM"
-            className="text-gray-400 hover:text-gray-900 dark:hover:text-white"
+            className="text-gray-400 hover:text-gray-900 dark:hover:text-white
+            "
           >
             <svg
-              className="h-5 w-5"
+              className="h-10 w-10"
               fill="currentColor"
               viewBox="0 0 24 24"
               aria-hidden="true"
@@ -74,7 +58,7 @@ const Footer: React.FC = () => {
             className="text-gray-400 hover:text-gray-900 dark:hover:text-white"
           >
             <svg
-              className="h-5 w-5"
+              className="h-10 w-10"
               fill="currentColor"
               viewBox="0 0 24 24"
               aria-hidden="true"
@@ -87,7 +71,6 @@ const Footer: React.FC = () => {
             </svg>
             <span className="sr-only">LinkedIn account</span>
           </a>
-          {/*//a para linkedn*/}
           <a
             href="https://www.linkedin.com/company/pragmaticslab"
             className=""

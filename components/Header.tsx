@@ -68,8 +68,10 @@ const Header: React.FC = () => {
           >
             <GenericIcon
               src={logoDoma}
-              width={100}
-              height={100}
+              width={80}
+              height={80}
+              href={'/'}
+              alt="Logo DoMa"
               transparent
               shadow={false}
             />
