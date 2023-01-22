@@ -1,11 +1,12 @@
 'use client'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
-import { links } from '../utils/data'
+import { getLogoDoMa, links } from '../utils/data'
+import GenericIcon from './GenericIcon'
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
-
+  const logoDoma = getLogoDoMa()
   useEffect(() => {
     const navbar = document.getElementById('navbar')
     const navbarHeight = navbar?.offsetHeight
@@ -59,8 +60,21 @@ const Header: React.FC = () => {
           className="container mx-auto flex flex-wrap items-center justify-between
         "
         >
-          <h2
-            className="
+          <div
+            className="flex
+          items-center
+          space-x-4
+          "
+          >
+            <GenericIcon
+              src={logoDoma}
+              width={100}
+              height={100}
+              transparent
+              shadow={false}
+            />
+            <h2
+              className="
               text-2xl font-bold text-font-primary
               dark:text-white
               md:-mt-2
@@ -69,9 +83,10 @@ const Header: React.FC = () => {
               md:dark:text-white
 
               "
-          >
-            DoMa
-          </h2>
+            >
+              DoMa
+            </h2>
+          </div>
           <button
             data-collapse="navbar-default"
             type="button"
