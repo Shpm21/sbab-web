@@ -61,12 +61,17 @@ export const links = [
 
 const logoPragmatics = require('../assets/images/LogoPragmaticsLab.png')
 const logoUcn = require('../assets/images/ucn-logo.png')
+const logoDoMa = require('../assets/images/DoMa.png')
 export const getLogoPragmatics = (): string => {
   return logoPragmatics
 }
 
 export const getLogoUcn = (): string => {
   return logoUcn
+}
+
+export const getLogoDoMa = (): string => {
+  return logoDoMa
 }
 
 const modelUsageImage = require('../assets/images/ModeloSBABM.png')
