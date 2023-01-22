@@ -5,6 +5,8 @@ interface Props {
   src: string
   width: number
   height: number
+  href: string
+  alt: string
   transparent?: boolean
   shadow?: boolean
 }
@@ -12,6 +14,8 @@ const GenericIcon: React.FC<Props> = ({
   src,
   width,
   height,
+  href,
+  alt,
   transparent,
   shadow,
 }) => {
@@ -20,12 +24,12 @@ const GenericIcon: React.FC<Props> = ({
   return (
     <div
       className={`4 mb-6 flex
-            h-14 w-14 items-center
-             justify-center rounded-full ${transparentClass} ${shadowClass} md:mb-0
-              md:h-20 md:w-20`}
+            h-10 w-10 items-center
+             justify-center rounded-full ${transparentClass} ${shadowClass} md:h-18
+              md:w-18 md:mb-0`}
     >
-      <a href="https://pragmaticslab.com/" className="flex items-center">
-        <Image src={src} alt="Pragmaticslab" width={width} height={height} />
+      <a href={href} className="flex items-center">
+        <Image src={src} alt={alt} width={width} height={height} />
       </a>
     </div>
   )
