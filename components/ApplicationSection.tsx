@@ -3,16 +3,14 @@ import React from 'react'
 import Subtitle from './Subtitle'
 import Paragraph from './Paragraph'
 import FormInput from './FormInput'
-import Carousel from './Carousel'
 
 const ApplicationSection: React.FC = () => {
   return (
     <>
       <GenericContainer>
         <Subtitle subTitle={'Test the Application'} />
-        <Paragraph paragraph={'This is a example'} />
-        <FormInput />
-        <Carousel />
+        <Paragraph paragraph={'Please upload a file with the xlsx extension to test DoMa.'} />
+        {/*<FormInput />*/}
       </GenericContainer>
     </>
   )
